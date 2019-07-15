@@ -1,0 +1,65 @@
+mkdir src
+mkdir src/css
+mkdir src/fonts
+mkdir src/img
+mkdir src/js
+mkdir src/template
+mkdir dist
+mkdir dist/css
+mkdir dist/fonts
+mkdir dist/img
+mkdir dist/js
+
+echo "<!DOCTYPE html>
+<html lang=\"ru\">
+<head>
+	<meta charset=\"UTF-8\">
+	<link rel=\"stylesheet\" href=\"/css/style.css\">
+	<title></title>
+</head>
+<body>
+	//= ./template/header.html
+	<p>Hi to All!</p>
+	//= ./template/footer.html
+	<script src=\"/js/script.js\"></script>
+</body>
+</html>">src/index.html
+
+echo "// Third Party
+
+@import ../../node_modules/normalizecss/normalize.css
+
+
+// Custom">src/css/style.sass
+
+echo "">src/js/script.js
+
+echo "<!DOCTYPE html>
+<html lang=\"ru\">
+<head>
+	<meta charset=\"UTF-8\">
+	<link rel=\"stylesheet\" href=\"/css/style.css\">
+	<title></title>
+</head>
+<body>
+	//= ./template/header.html
+	<p>Hi to All!</p>
+	//= ./template/footer.html
+	<script src=\"/js/script.js\"></script>
+</body>
+</html>">dist/index.html
+
+echo "// Third Party
+
+@import ../../node_modules/normalizecss/normalize.css
+
+
+// Custom">dist/css/style.css
+
+echo "">dist/js/script.js
+
+echo "<footer>Footer</footer>">src/template/footer.html
+
+echo "<header>Header</header>">src/template/header.html
+
+npm install
